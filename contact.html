@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Samantha Ellis Art</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo">
+                    <!-- <img src="./logo.png" alt="Samantha Ellis Art" id="logo-placeholder"> -->
+                    <h1><a href="main.html">Samantha <span class="accent">Ellis</span></a></h1>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="main.html" class="nav-link">Home</a></li>
+                        <li><a href="shop.html" class="nav-link">Shop</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="cart-toggle" id="cart-toggle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="m1 1 4 4 12 2-2 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-close" id="mobile-menu-close">&times;</div>
+            <ul class="mobile-nav-menu">
+                <li><a href="main.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="shop.html" class="mobile-nav-link">Shop</a></li>
+                <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About</a></li>
+                <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cart-close">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: <span id="cart-total">£0</span></strong>
+            </div>
+            <button class="btn btn--primary checkout-btn" id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Contact Content -->
+    <main class="main-content contact-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Contact & Commissions</h1>
+                <p>If you would like to get in touch regarding a personal commission or for general enquiries, please use the form below and I will get back to you as soon as I can!</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Name (required)</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email">Email Address (required)</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-phone">Phone Number (optional)</label>
+                            <input type="tel" id="contact-phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">Select a subject...</option>
+                                <option value="general">General Enquiry</option>
+                                <option value="purchase">Purchase an Original Painting</option>
+                                <option value="commission">Commission Enquiry</option>
+                                <option value="press">Press / Exhibition</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message (required)</label>
+                            <textarea id="contact-message" name="message" rows="6" required placeholder="Please provide as much detail as possible to aid your enquiry."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-file">File Upload (optional for sharing reference photos if commissioning)</label>
+                            <input type="file" id="contact-file" name="file" accept="image/*,.pdf">
+                        </div>
+
+                        <button type="submit" class="btn btn--primary">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Direct Contact Info -->
+                <div class="contact-info-section">
+                    <div class="contact-info">
+                        <h3>Direct Contact</h3>
+
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p><a href="mailto:hello@samanthaellisart.com">hello@samanthaellisart.com</a></p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>Studio Location</h4>
+                            <p>Northamptonshire, UK<br>(visits by appointment only)</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>Instagram</h4>
+                            <p><a href="#" target="_blank">@samanthaellisart</a></p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h4>Gallery</h4>
+                            <p><a href="gallery.html">View Full Gallery</a></p>
+                        </div>
+                    </div>
+
+                    <div class="response-time">
+                        <h3>Response Time</h3>
+                        <p>I aim to respond to all messages within 2–3 business days. For urgent enquiries about exhibitions or press, please mark your message as "Urgent" in the subject line.</p>
+                    </div>
+
+                    <!-- For Commissions Info -->
+                    <div class="commission-info">
+                        <h3>For Commissions</h3>
+                        <p>I'm primarily a landscape painter, focusing on, but not limited to, skyscapes and starscapes (as you will see if you browse through my website). The minimum size painting that I can produce is 40cm x 40cm, however if you would like something smaller please let me know and I will see what I can do!</p>
+
+                        <p>Every sky holds a story. I paint the stars and clouds as they appeared in the moments that matter most to you - whether it's your wedding day, anniversary, birth of a child, or any milestone that deserves to be remembered in the stars.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Samantha Ellis Art</h3>
+                    <p>Original oil paintings inspired by the sky, stars, and history's most defining moments.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="mailto:hello@samanthaellisart.com">hello@samanthaellisart.com</a></li>
+                        <li><a href="#">@samanthaellisart</a></li>
+                        <li>Northamptonshire, UK</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Samantha Ellis Art. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
