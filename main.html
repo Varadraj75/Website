@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samantha Ellis - Sky Artist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-container">
+                <!-- Left Navigation -->
+                <div class="nav-left">
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="shop.html" class="nav-link">Shop</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Center Logo -->
+                <div class="logo-center">
+                    <div class="logo-container">
+                        <img src="./logo.png" alt="Samantha Ellis Art" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <!-- <div class="logo-placeholder">
+                            <i class="fas fa-palette"></i>
+                            <span>LOGO</span>
+                        </div> -->
+                    </div>
+                    <h1 class="logo-text">Samantha <span class="accent">Ellis</span></h1>
+                </div>
+
+                <!-- Right Navigation -->
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <button class="cart-toggle" id="cart-toggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+
+                    <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <h2>Menu</h2>
+                <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-menu">
+                <li><a href="#home" class="mobile-nav-link"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="shop.html" class="mobile-nav-link"><i class="fas fa-store"></i>Shop</a></li>
+                <li><a href="gallery.html" class="mobile-nav-link"><i class="fas fa-images"></i>Gallery</a></li>
+                <li><a href="about.html" class="mobile-nav-link"><i class="fas fa-user"></i>About</a></li>
+                <li><a href="blog.html" class="mobile-nav-link"><i class="fas fa-blog"></i>Blog</a></li>
+                <li><a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+            <button class="cart-close" id="cart-close" aria-label="Close cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <p class="cart-subtitle">Add some beautiful artwork!</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: <span id="cart-total">£0</span></strong>
+            </div>
+            <button class="btn btn--primary checkout-btn" id="checkout-btn">
+                <i class="fas fa-credit-card"></i> Secure Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero" id="home">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline >
+                <source src="./4377450-uhd_3840_2160_30fps.mp4" type="video/mp4">
+                <source src="./4377450-uhd_3840_2160_30fps.mp4" type="video/mp4">
+                <!-- Fallback background will show if video doesn't load -->
+            </video>
+            <div class="video-overlay">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">"The sky remembers every act of courage, art helps us listen"</h1>
+                        <p class="hero-subtitle">- Samantha Ellis</p>
+                        <div class="hero-actions">
+                            <a href="shop.html" class="btn btn--primary">
+                                <i class="fas fa-palette"></i> Shop Original Paintings
+                            </a>
+                            <a href="gallery.html" class="btn btn--secondary">
+                                <i class="fas fa-images"></i> View Gallery
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Paintings -->
+    <section class="featured-paintings section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop Original Paintings</h2>
+                <p>Once a painting is gone, it's gone forever. Don't miss your chance to own a piece of the sky.</p>
+            </div>
+
+            <div class="paintings-grid" id="featured-paintings-grid">
+                <!-- Featured paintings will be loaded here -->
+            </div>
+
+            <div class="section-footer">
+                <a href="shop.html" class="btn btn--primary">
+                    <i class="fas fa-store"></i> Shop All Paintings
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class="gallery-preview section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery Preview</h2>
+                <p>Explore my collection of paintings inspired by skies, stars, and history's defining moments.</p>
+            </div>
+
+            <div class="gallery-grid" id="gallery-preview-grid">
+                <!-- Gallery preview will be loaded here -->
+            </div>
+
+            <div class="section-footer">
+                <a href="gallery.html" class="btn btn--secondary">
+                    <i class="fas fa-images"></i> View Full Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commission Section -->
+    <section class="commission-section">
+        <div class="container">
+            <div class="commission-content">
+                <div class="commission-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h2>Your Sky, Your Story</h2>
+                <p>Commission a one-of-a-kind painting of the stars and clouds from your special day. Every sky holds a story. I paint the stars and clouds as they appeared in the moments that matter most to you.</p>
+                <button class="btn btn--primary commission-btn" id="commission-btn">
+                    <i class="fas fa-brush"></i> Commission a Painting
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Be the First to See New Originals</h2>
+                <p>Join the mailing list to get early access to Samantha's new paintings before they're released.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn--primary">
+                        <i class="fas fa-envelope"></i> Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Samantha Ellis Art</h3>
+                    <p>Original oil paintings inspired by the sky, stars, and history's most defining moments.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html"><i class="fas fa-store"></i> Shop</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hello@samanthaellisart.com">hello@samanthaellisart.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Northamptonshire, UK</li>
+                        <li><i class="fas fa-phone"></i> Available for commissions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Samantha Ellis Art. All rights reserved. | Built with ❤️ for art lovers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Commission Modal -->
+    <div class="modal" id="commission-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-star"></i> Commission Your Sky</h3>
+                <button class="modal-close" id="commission-modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="commission-form" id="commission-form">
+                <!-- Commission form content here -->
+            </form>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-lock"></i> Secure Checkout</h3>
+                <button class="modal-close" id="checkout-modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="checkout-form-container">
+                <!-- Stripe payment form will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="app.js"></script>
+</body>
+</html>
